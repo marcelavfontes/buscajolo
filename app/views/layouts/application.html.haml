@@ -1,0 +1,80 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %title Buscajolo
+
+    = stylesheet_link_tag  "application", :media => "all"
+
+    = csrf_meta_tags
+
+  %body
+    / Wrap all page content here
+    #wrap
+      #barra-topo.navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            = link_to "Buscajolo", root_path, class: "navbar-brand"
+          .navbar-collapse.collapse
+            %ul.nav.navbar-nav
+              / %li.active
+              /   %a{href: "#"} Home
+              / %li
+              /   %a{href: "#"} About
+              / %li
+              /   %a{href: "#"} Contact
+            %ul.nav.navbar-nav.navbar-right
+              - if user_signed_in?
+                %li
+                  %p.navbar-text
+                    Logado como 
+                    = succeed "." do
+                      %strong= current_user.email
+                %li
+                  = link_to 'Editar Perfil', edit_user_registration_path
+                %li
+                  = link_to "Sair", destroy_user_session_path, method: :delete
+              - else
+                %li
+                  = link_to "Registrar-se", new_user_registration_path
+                %li
+                  = link_to "Entrar", new_user_session_path
+                %li 
+                  = link_to user_omniauth_authorize_path(:facebook) do
+                    Logar com Facebook
+                    %i.icon-facebook
+
+              / - if usuario_atual
+              /   %li.extra-right-margin
+              /     %p.navbar-text
+              /       = usuario_atual.nome
+              /   %li
+              /     = link_to "Sair", signout_path, id: "sign_out"
+              / - else
+              /   %li
+              /     = button_to "Logar com Facebook", "/auth/facebook", id: "sign_in", class: "btn btn-sm btn-primary navbar-btn"
+              
+      .container
+      - if !flash.empty?
+        .container.no-padding
+          - flash.each do |name, msg|
+            - alert_class = name == :alert ? "alert-danger" : "alert-success"
+            .alert.fade.in.no-margin{id: "flash_#{name}", class: alert_class}
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} ×
+              #{msg}
+
+      = yield
+
+    #footer
+      .container
+        %p.text-muted.credit Projeto de Tópicos Especiais em Engenharia de Software III.
+        
+    / Placed at the end of the document so the pages load faster
+    = javascript_include_tag "application"

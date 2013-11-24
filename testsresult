@@ -1,0 +1,665 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF...FFF..........................FFFFFFFFFFFFFFFFFFFFFFFFFF
+
+Failures:
+
+  1) Produto pode ser instanciado
+     Failure/Error: Produto.new.should be_an_instance_of(Produto)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/produto_spec.rb:12:in `new'
+     # ./spec/models/produto_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  2) Produto deve retornar todos os nomes e ids de produtos existentes
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/produto_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+  3) Produto pode ser salvo com sucesso
+     Failure/Error: Produto.create.should be_persisted
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/produto_spec.rb:16:in `block (2 levels) in <top (required)>'
+
+  4) ProdutosController GET new assigns a new produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  5) ProdutosController PUT update with valid params assigns the requested produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  6) ProdutosController PUT update with valid params updates the requested produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  7) ProdutosController PUT update with valid params redirects to the produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  8) ProdutosController PUT update with invalid params assigns the produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  9) ProdutosController PUT update with invalid params re-renders the 'edit' template
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  10) ProdutosController GET index assigns all produtos as @produtos
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  11) ProdutosController GET edit assigns the requested produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  12) ProdutosController DELETE destroy destroys the requested produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  13) ProdutosController DELETE destroy redirects to the produtos list
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  14) ProdutosController GET show assigns the requested produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  15) ProdutosController POST create with valid params assigns a newly created produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  16) ProdutosController POST create with valid params creates a new Produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  17) ProdutosController POST create with valid params redirects to the created produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  18) ProdutosController POST create with invalid params assigns a newly created but unsaved produto as @produto
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  19) ProdutosController POST create with invalid params re-renders the 'new' template
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/produtos_controller_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+  20) FornecedorsHelper deve retornar uma string representando a lista de produtos que o fornecedor tem
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/helpers/fornecedors_helper_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+  21) FornecedorsHelper deve retornar uma string com o html com labels diferenciadas para os produtos do fornecedor que o usuario buscou
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/helpers/fornecedors_helper_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+  22) FornecedorsController GET new assigns a new fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  23) FornecedorsController PUT update with valid params assigns the requested fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  24) FornecedorsController PUT update with valid params updates the requested fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  25) FornecedorsController PUT update with valid params redirects to the fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  26) FornecedorsController PUT update with invalid params assigns the fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  27) FornecedorsController PUT update with invalid params re-renders the 'edit' template
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  28) FornecedorsController GET index assigns all fornecedors as @fornecedors
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  29) FornecedorsController GET edit assigns the requested fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  30) FornecedorsController DELETE destroy destroys the requested fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  31) FornecedorsController DELETE destroy redirects to the fornecedors list
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  32) FornecedorsController GET show assigns the requested fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  33) FornecedorsController POST create with valid params assigns a newly created fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  34) FornecedorsController POST create with valid params creates a new Fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  35) FornecedorsController POST create with valid params redirects to the created fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  36) FornecedorsController POST create with invalid params assigns a newly created but unsaved fornecedor as @fornecedor
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  37) FornecedorsController POST create with invalid params re-renders the 'new' template
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/fornecedors_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  38) AnalisesController GET new assigns a new analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  39) AnalisesController PUT update with valid params assigns the requested analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  40) AnalisesController PUT update with valid params updates the requested analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  41) AnalisesController PUT update with valid params redirects to the analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  42) AnalisesController PUT update with invalid params assigns the analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  43) AnalisesController PUT update with invalid params re-renders the 'edit' template
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  44) AnalisesController GET index assigns all analises as @analises
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  45) AnalisesController GET edit assigns the requested analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  46) AnalisesController DELETE destroy destroys the requested analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  47) AnalisesController DELETE destroy redirects to the analises list
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  48) AnalisesController GET show assigns the requested analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  49) AnalisesController POST create with valid params assigns a newly created analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  50) AnalisesController POST create with valid params creates a new Analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  51) AnalisesController POST create with valid params redirects to the created analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  52) AnalisesController POST create with invalid params assigns a newly created but unsaved analise as @analise
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  53) AnalisesController POST create with invalid params re-renders the 'new' template
+     Failure/Error: @user = FactoryGirl.build(:user, admin: true)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/controllers/analises_controller_spec.rb:36:in `block (2 levels) in <top (required)>'
+
+  54) Fornecedor pode ser instanciado
+     Failure/Error: Fornecedor.new.should be_an_instance_of(Fornecedor)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'fornecedors'
+     # ./spec/models/fornecedor_spec.rb:47:in `new'
+     # ./spec/models/fornecedor_spec.rb:47:in `block (2 levels) in <top (required)>'
+
+  55) Fornecedor deve listar nomes dos produtos que contem
+     Failure/Error: cimento = FactoryGirl.create(:produto, nome: "cimento")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/fornecedor_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  56) Fornecedor pode ser salvo com sucesso
+     Failure/Error: Fornecedor.create.should be_persisted
+     ActiveRecord::StatementInvalid:
+       Could not find table 'fornecedors'
+     # ./spec/models/fornecedor_spec.rb:51:in `block (2 levels) in <top (required)>'
+
+  57) Fornecedor buscar fornecedores deve retornar todos os fornecedores se os parametros forem vazios
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/fornecedor_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  58) Fornecedor buscar fornecedores deve buscar por produto e nome
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/fornecedor_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  59) Fornecedor buscar fornecedores deve buscar por produto
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/fornecedor_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  60) Fornecedor buscar fornecedores deve buscar por nome
+     Failure/Error: @cimento = FactoryGirl.create(:produto, nome: "cimento", id: "1")
+     ActiveRecord::StatementInvalid:
+       Could not find table 'produtos'
+     # ./spec/models/fornecedor_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  61) Analise pode ser instanciado
+     Failure/Error: Analise.new.should be_an_instance_of(Analise)
+     ActiveRecord::StatementInvalid:
+       Could not find table 'analises'
+     # ./spec/models/analise_spec.rb:5:in `new'
+     # ./spec/models/analise_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+  62) Analise pode ser salvo com sucesso
+     Failure/Error: Analise.create.should be_persisted
+     ActiveRecord::StatementInvalid:
+       Could not find table 'analises'
+     # ./spec/models/analise_spec.rb:9:in `block (2 levels) in <top (required)>'
+
+  63) Permission as admin 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: true)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:46:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:48:in `block (3 levels) in <top (required)>'
+
+  64) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:61:in `block (3 levels) in <top (required)>'
+
+  65) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:78:in `block (3 levels) in <top (required)>'
+
+  66) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:70:in `block (3 levels) in <top (required)>'
+
+  67) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:59:in `block (3 levels) in <top (required)>'
+
+  68) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:81:in `block (3 levels) in <top (required)>'
+
+  69) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:75:in `block (3 levels) in <top (required)>'
+
+  70) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:79:in `block (3 levels) in <top (required)>'
+
+  71) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:66:in `block (3 levels) in <top (required)>'
+
+  72) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:64:in `block (3 levels) in <top (required)>'
+
+  73) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:84:in `block (3 levels) in <top (required)>'
+
+  74) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:57:in `block (3 levels) in <top (required)>'
+
+  75) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:54:in `block (3 levels) in <top (required)>'
+
+  76) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:68:in `block (3 levels) in <top (required)>'
+
+  77) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:85:in `block (3 levels) in <top (required)>'
+
+  78) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:82:in `block (3 levels) in <top (required)>'
+
+  79) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:83:in `block (3 levels) in <top (required)>'
+
+  80) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  81) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:60:in `block (3 levels) in <top (required)>'
+
+  82) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:62:in `block (3 levels) in <top (required)>'
+
+  83) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:69:in `block (3 levels) in <top (required)>'
+
+  84) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:77:in `block (3 levels) in <top (required)>'
+
+  85) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:76:in `block (3 levels) in <top (required)>'
+
+  86) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:63:in `block (3 levels) in <top (required)>'
+
+  87) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:56:in `block (3 levels) in <top (required)>'
+
+  88) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:73:in `block (3 levels) in <top (required)>'
+
+  89) Permission as member 
+     Failure/Error: subject { Permission.new(FactoryGirl.build(:user, admin: false)) }
+     ActiveRecord::StatementInvalid:
+       Could not find table 'users'
+     # ./spec/models/permission_spec.rb:52:in `block (3 levels) in <top (required)>'
+     # ./spec/models/permission_spec.rb:67:in `block (3 levels) in <top (required)>'
+
+Finished in 0.23919 seconds
+118 examples, 89 failures
+
+Failed examples:
+
+rspec ./spec/models/produto_spec.rb:11 # Produto pode ser instanciado
+rspec ./spec/models/produto_spec.rb:4 # Produto deve retornar todos os nomes e ids de produtos existentes
+rspec ./spec/models/produto_spec.rb:15 # Produto pode ser salvo com sucesso
+rspec ./spec/controllers/produtos_controller_spec.rb:56 # ProdutosController GET new assigns a new produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:119 # ProdutosController PUT update with valid params assigns the requested produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:109 # ProdutosController PUT update with valid params updates the requested produto
+rspec ./spec/controllers/produtos_controller_spec.rb:125 # ProdutosController PUT update with valid params redirects to the produto
+rspec ./spec/controllers/produtos_controller_spec.rb:133 # ProdutosController PUT update with invalid params assigns the produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:141 # ProdutosController PUT update with invalid params re-renders the 'edit' template
+rspec ./spec/controllers/produtos_controller_spec.rb:40 # ProdutosController GET index assigns all produtos as @produtos
+rspec ./spec/controllers/produtos_controller_spec.rb:63 # ProdutosController GET edit assigns the requested produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:152 # ProdutosController DELETE destroy destroys the requested produto
+rspec ./spec/controllers/produtos_controller_spec.rb:159 # ProdutosController DELETE destroy redirects to the produtos list
+rspec ./spec/controllers/produtos_controller_spec.rb:48 # ProdutosController GET show assigns the requested produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:78 # ProdutosController POST create with valid params assigns a newly created produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:72 # ProdutosController POST create with valid params creates a new Produto
+rspec ./spec/controllers/produtos_controller_spec.rb:84 # ProdutosController POST create with valid params redirects to the created produto
+rspec ./spec/controllers/produtos_controller_spec.rb:91 # ProdutosController POST create with invalid params assigns a newly created but unsaved produto as @produto
+rspec ./spec/controllers/produtos_controller_spec.rb:98 # ProdutosController POST create with invalid params re-renders the 'new' template
+rspec ./spec/helpers/fornecedors_helper_spec.rb:21 # FornecedorsHelper deve retornar uma string representando a lista de produtos que o fornecedor tem
+rspec ./spec/helpers/fornecedors_helper_spec.rb:25 # FornecedorsHelper deve retornar uma string com o html com labels diferenciadas para os produtos do fornecedor que o usuario buscou
+rspec ./spec/controllers/fornecedors_controller_spec.rb:57 # FornecedorsController GET new assigns a new fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:120 # FornecedorsController PUT update with valid params assigns the requested fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:110 # FornecedorsController PUT update with valid params updates the requested fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:126 # FornecedorsController PUT update with valid params redirects to the fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:134 # FornecedorsController PUT update with invalid params assigns the fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:142 # FornecedorsController PUT update with invalid params re-renders the 'edit' template
+rspec ./spec/controllers/fornecedors_controller_spec.rb:41 # FornecedorsController GET index assigns all fornecedors as @fornecedors
+rspec ./spec/controllers/fornecedors_controller_spec.rb:64 # FornecedorsController GET edit assigns the requested fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:153 # FornecedorsController DELETE destroy destroys the requested fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:160 # FornecedorsController DELETE destroy redirects to the fornecedors list
+rspec ./spec/controllers/fornecedors_controller_spec.rb:49 # FornecedorsController GET show assigns the requested fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:79 # FornecedorsController POST create with valid params assigns a newly created fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:73 # FornecedorsController POST create with valid params creates a new Fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:85 # FornecedorsController POST create with valid params redirects to the created fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:92 # FornecedorsController POST create with invalid params assigns a newly created but unsaved fornecedor as @fornecedor
+rspec ./spec/controllers/fornecedors_controller_spec.rb:99 # FornecedorsController POST create with invalid params re-renders the 'new' template
+rspec ./spec/controllers/analises_controller_spec.rb:57 # AnalisesController GET new assigns a new analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:124 # AnalisesController PUT update with valid params assigns the requested analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:114 # AnalisesController PUT update with valid params updates the requested analise
+rspec ./spec/controllers/analises_controller_spec.rb:130 # AnalisesController PUT update with valid params redirects to the analise
+rspec ./spec/controllers/analises_controller_spec.rb:138 # AnalisesController PUT update with invalid params assigns the analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:146 # AnalisesController PUT update with invalid params re-renders the 'edit' template
+rspec ./spec/controllers/analises_controller_spec.rb:41 # AnalisesController GET index assigns all analises as @analises
+rspec ./spec/controllers/analises_controller_spec.rb:65 # AnalisesController GET edit assigns the requested analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:157 # AnalisesController DELETE destroy destroys the requested analise
+rspec ./spec/controllers/analises_controller_spec.rb:164 # AnalisesController DELETE destroy redirects to the analises list
+rspec ./spec/controllers/analises_controller_spec.rb:49 # AnalisesController GET show assigns the requested analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:83 # AnalisesController POST create with valid params assigns a newly created analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:77 # AnalisesController POST create with valid params creates a new Analise
+rspec ./spec/controllers/analises_controller_spec.rb:89 # AnalisesController POST create with valid params redirects to the created analise
+rspec ./spec/controllers/analises_controller_spec.rb:96 # AnalisesController POST create with invalid params assigns a newly created but unsaved analise as @analise
+rspec ./spec/controllers/analises_controller_spec.rb:103 # AnalisesController POST create with invalid params re-renders the 'new' template
+rspec ./spec/models/fornecedor_spec.rb:46 # Fornecedor pode ser instanciado
+rspec ./spec/models/fornecedor_spec.rb:5 # Fornecedor deve listar nomes dos produtos que contem
+rspec ./spec/models/fornecedor_spec.rb:50 # Fornecedor pode ser salvo com sucesso
+rspec ./spec/models/fornecedor_spec.rb:40 # Fornecedor buscar fornecedores deve retornar todos os fornecedores se os parametros forem vazios
+rspec ./spec/models/fornecedor_spec.rb:35 # Fornecedor buscar fornecedores deve buscar por produto e nome
+rspec ./spec/models/fornecedor_spec.rb:30 # Fornecedor buscar fornecedores deve buscar por produto
+rspec ./spec/models/fornecedor_spec.rb:25 # Fornecedor buscar fornecedores deve buscar por nome
+rspec ./spec/models/analise_spec.rb:4 # Analise pode ser instanciado
+rspec ./spec/models/analise_spec.rb:8 # Analise pode ser salvo com sucesso
+rspec ./spec/models/permission_spec.rb:48 # Permission as admin 
+rspec ./spec/models/permission_spec.rb:61 # Permission as member 
+rspec ./spec/models/permission_spec.rb:78 # Permission as member 
+rspec ./spec/models/permission_spec.rb:70 # Permission as member 
+rspec ./spec/models/permission_spec.rb:59 # Permission as member 
+rspec ./spec/models/permission_spec.rb:81 # Permission as member 
+rspec ./spec/models/permission_spec.rb:75 # Permission as member 
+rspec ./spec/models/permission_spec.rb:79 # Permission as member 
+rspec ./spec/models/permission_spec.rb:66 # Permission as member 
+rspec ./spec/models/permission_spec.rb:64 # Permission as member 
+rspec ./spec/models/permission_spec.rb:84 # Permission as member 
+rspec ./spec/models/permission_spec.rb:57 # Permission as member 
+rspec ./spec/models/permission_spec.rb:54 # Permission as member 
+rspec ./spec/models/permission_spec.rb:68 # Permission as member 
+rspec ./spec/models/permission_spec.rb:85 # Permission as member 
+rspec ./spec/models/permission_spec.rb:82 # Permission as member 
+rspec ./spec/models/permission_spec.rb:83 # Permission as member 
+rspec ./spec/models/permission_spec.rb:55 # Permission as member 
+rspec ./spec/models/permission_spec.rb:60 # Permission as member 
+rspec ./spec/models/permission_spec.rb:62 # Permission as member 
+rspec ./spec/models/permission_spec.rb:69 # Permission as member 
+rspec ./spec/models/permission_spec.rb:77 # Permission as member 
+rspec ./spec/models/permission_spec.rb:76 # Permission as member 
+rspec ./spec/models/permission_spec.rb:63 # Permission as member 
+rspec ./spec/models/permission_spec.rb:56 # Permission as member 
+rspec ./spec/models/permission_spec.rb:73 # Permission as member 
+rspec ./spec/models/permission_spec.rb:67 # Permission as member 
+
+Randomized with seed 30786
+

@@ -1,0 +1,14 @@
+.container
+  %p#notice= notice
+  %p
+    %b Titulo:
+    = @comentario.titulo
+  %p
+    %b Texto:
+    = @comentario.texto
+  %p
+    %b Usuario:
+    = @comentario.user.email
+  = link_to 'Editar', edit_comentario_path(@comentario)
+  |
+  \#{link_to 'Voltar', comentarios_path}

@@ -1,0 +1,41 @@
+.jumbotron
+  .container
+    %h2 Bem vindo ao Buscajolo!
+    %p A procura de materiais de constru&#231;&#227;o? Busque abaixo o que procura e encontre todas as lojas fornecedoras, com an&#225;lises de clientes reais! Por favor, deixe-nos a sua an&#225;lise tamb&#233;m e ajude futuros clientes!
+
+    = form_tag results_path, :method => 'get' do
+      .form-group
+        = label_tag :fornecedor_nome, "Nome do Fornecedor"
+        = text_field_tag :fornecedor_nome, params[:fornecedor_nome], class: "form-control", :placeholder => "Nome do Fornecedor"
+      .form-group
+        = label_tag :produtos
+        = select_tag 'produtos', options_from_collection_for_select(@produtos, 'id', 'nome'),{:multiple => true, :id => "fornecedor_produtos", "data-placeholder" => "Selecione os produtos..."}
+      .actions
+        = submit_tag "Buscar!", :name => nil, class: "btn btn-primary" 
+
+- if user_signed_in? && current_user.admin
+  .container
+    .row
+      .col-md-12
+        Admin:
+        .btn-group
+          = link_to "Fornecedores", fornecedors_path, class: "btn btn-default"
+          = link_to "Produtos", produtos_path, class: "btn btn-default"
+          = link_to "Analises", analises_path, class: "btn btn-default"
+
+
+/ Begin page content
+/ .container
+/   .row
+/     .col-md-2{style: "background-color:#eee"}
+/       %h4
+/         Categorias
+/     .col-md-6
+/       %h4{style: "text-align:center;"}
+/         Produtos
+/     .col-md-4
+/       %h4{style: "text-align:center;"}
+/         Propagandas
+/       %a{href: ""}
+/         = image_tag "/assets/pedrelandia.png"
+      

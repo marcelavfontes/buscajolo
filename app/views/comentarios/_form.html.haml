@@ -1,0 +1,17 @@
+= form_for([@analise,@comentario]) do |f|
+  - if @comentario.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@comentario.errors.count, "error")
+        prohibited this comentario from being saved:
+      %ul
+        - @comentario.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :titulo
+    = f.text_field :titulo, class: "form-control"
+  .form-group
+    = f.label :texto
+    = f.text_area :texto, class: "form-control"
+  .actions
+    = f.submit params[:action] == "new" ? "Criar Comentario" : "Atualizar Comentario", class: "btn btn-primary" 

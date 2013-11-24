@@ -1,0 +1,17 @@
+= form_for([@fornecedor,@analise]) do |f|
+  - if @analise.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@analise.errors.count, "error")
+        prohibited this analise from being saved:
+      %ul
+        - @analise.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :titulo
+    = f.text_field :titulo, class: "form-control"
+  .form-group
+    = f.label :texto
+    = f.text_area :texto, class: "form-control"
+  .actions
+    = f.submit params[:action] == "new" ? "Criar Analise" : "Atualizar Analise", class: "btn btn-primary" 

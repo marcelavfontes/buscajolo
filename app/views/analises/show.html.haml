@@ -1,0 +1,18 @@
+.container
+  %p
+    %b Titulo:
+    = @analise.titulo
+  %p
+    %b Texto:
+    = @analise.texto
+  %p
+    %b Fornecedor:
+    = @analise.fornecedor.nome
+  %p
+    %b Usuario:
+    = @analise.user.email
+
+
+  = link_to 'Editar', edit_analise_path(@analise)
+  |
+  \#{link_to 'Voltar', analises_path}

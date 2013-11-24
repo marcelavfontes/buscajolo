@@ -1,0 +1,16 @@
+.container
+  %p
+    %b Nome:
+    = @fornecedor.nome
+  %p
+    %b Cidade:
+    = @fornecedor.cidade
+  %p
+    %b Produtos:
+    = produtos_string(@fornecedor)
+  %p
+    = link_to 'Analises', fornecedor_analises_path(@fornecedor)
+
+  = link_to 'Editar', edit_fornecedor_path(@fornecedor)
+  |
+  \#{link_to 'Voltar', fornecedors_path}

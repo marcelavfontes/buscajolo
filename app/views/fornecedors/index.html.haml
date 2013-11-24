@@ -1,0 +1,23 @@
+.container  
+  %h1 Lista de fornecedores
+  %table.table
+    %tr
+      %th Nome
+      %th Cidade
+      %th Produtos
+      %th
+      %th
+      %th
+      %th
+    - @fornecedors.each do |fornecedor|
+      %tr
+        %td= fornecedor.nome
+        %td= fornecedor.cidade
+        %td= produtos_string(fornecedor)
+        %td= link_to 'Analises', fornecedor_analises_path(fornecedor)
+        %td= link_to 'Mostrar', fornecedor
+        %td= link_to 'Editar', edit_fornecedor_path(fornecedor)
+        %td= link_to 'Apagar', fornecedor, method: :delete, data: { confirm: 'Tem certeza?' }
+
+  %br/
+  = link_to 'Novo Fornecedor', new_fornecedor_path

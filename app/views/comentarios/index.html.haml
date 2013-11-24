@@ -1,0 +1,22 @@
+.container
+  %h1 Lista de comentarios
+  %table
+    %tr
+      %th Titulo
+      %th Texto
+      %th User
+      %th Analise
+      %th
+      %th
+      %th
+    - @comentarios.each do |comentario|
+      %tr
+        %td= comentario.titulo
+        %td= comentario.texto
+        %td= comentario.user_id
+        %td= comentario.analise.try(:id)
+        %td= link_to 'Show', comentario
+        %td= link_to 'Edit', edit_comentario_path(comentario)
+        %td= link_to 'Destroy', comentario, method: :delete, data: { confirm: 'Are you sure?' }  
+  %br/
+  / = link_to 'Novo Comentario', new_comentario_path

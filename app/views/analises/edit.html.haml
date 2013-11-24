@@ -1,0 +1,13 @@
+.container
+  %p
+    %b Fornecedor:
+    = @analise.fornecedor.nome
+  %p
+    %b Usuario:
+    = @analise.user.email
+
+  %h1 Editar analise
+  = render 'form'
+  = link_to 'Mostrar', @analise
+  |
+  \#{link_to 'Voltar', analises_path}

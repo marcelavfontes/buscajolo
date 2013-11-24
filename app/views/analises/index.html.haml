@@ -1,0 +1,27 @@
+.container
+  %h1 Lista de analises
+  %table.table
+    %tr
+      %th Titulo
+      %th Texto
+      %th Fornecedor
+      %th Usuario
+      %th
+      %th
+      %th
+      %th
+      %th
+    - @analises.each do |analise|
+      %tr
+        %td= analise.titulo
+        %td= analise.texto
+        %td= link_to "#{analise.fornecedor.nome}", fornecedor_path(analise.fornecedor) 
+        %td= analise.user.email
+        %td= link_to 'Ver Comentarios', analise_comentarios_path(analise)
+        %td= link_to 'Escrever comentario', new_analise_comentario_path(analise) 
+
+        %td= link_to 'Mostrar', analise
+        %td= link_to 'Editar', edit_analise_path(analise)
+        %td= link_to 'Apagar', analise, method: :delete, data: { confirm: 'Tem certeza?' }  
+  %br/
+  / = link_to 'Nova Analise', new_analise_path

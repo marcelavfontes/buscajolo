@@ -1,0 +1,9 @@
+.container
+  %h1 Nova analise
+
+  %p
+    %b Fornecedor:
+    = @fornecedor.nome
+
+  = render 'form'
+  = link_to 'Voltar', analises_path
