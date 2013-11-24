@@ -35,10 +35,10 @@ gem 'jquery-rails'
 
 gem "rspec-rails", :group => [:test, :development]
 group :test do
-  gem "ZenTest"
+  # gem "ZenTest"
   gem "factory_girl_rails"
-  gem "capybara"
-  gem "guard-rspec"
+  # gem "capybara"
+  # gem "guard-rspec"
 end
 
 # To use ActiveModel has_secure_password
