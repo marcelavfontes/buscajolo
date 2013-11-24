@@ -2,6 +2,4 @@ language: ruby
 rvm:
   - 1.9.3
 
-script: rake db:migrate
-script: rake db:test:prepare
-script: rspec spec
+script: bundle exec rspec spec
