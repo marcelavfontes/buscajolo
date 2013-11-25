@@ -4,6 +4,7 @@ class ComentariosController < ApplicationController
   def index
     if params[:analise_id]
       @comentarios = Comentario.find_all_by_analise_id(params[:analise_id])
+      @analise = Analise.find_by_id(params[:analise_id])
     else
       @comentarios = Comentario.all
     end 
@@ -53,7 +54,7 @@ class ComentariosController < ApplicationController
     
     respond_to do |format|
       if @comentario.save
-        format.html { redirect_to @comentario, notice: 'Comentario was successfully created.' }
+        format.html { redirect_to analise_comentarios_path(@analise), notice: 'Comentario foi criado com sucesso.' }
         format.json { render json: @comentario, status: :created, location: @comentario }
       else
         format.html { render action: "new" }

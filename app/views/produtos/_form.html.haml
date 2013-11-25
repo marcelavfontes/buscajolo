@@ -7,9 +7,8 @@
       %ul
         - @produto.errors.full_messages.each do |msg|
           %li= msg
-  .field
+  .form-group
     = f.label :nome
-    %br/
-    = f.text_field :nome
-  .actions
-    = f.submit
+    = f.text_field :nome, class: "form-control"
+  .form-group
+    = f.submit params[:action] == "new" ? "Criar Produto" : "Atualizar Produto", class: "btn btn-primary" 

@@ -1,4 +1,19 @@
 .container
+  - if @fornecedor
+    .panel.panel-primary
+      .panel-heading
+        Fornecedor
+      .panel-body
+        %p
+          %b Nome:
+          = @fornecedor.nome
+        %p
+          %b Cidade:
+          = @fornecedor.cidade
+        %p
+          %b Produtos:
+          = produtos_string(@fornecedor)
+
   %h1 Lista de analises
   %table.table
     %tr
@@ -8,20 +23,33 @@
       %th Usuario
       %th
       %th
-      %th
-      %th
-      %th
+      - if current_user.try(:admin)
+        %th
+        %th
+        %th
     - @analises.each do |analise|
       %tr
         %td= analise.titulo
-        %td= analise.texto
+        %td.well
+          = analise.texto
         %td= link_to "#{analise.fornecedor.nome}", fornecedor_path(analise.fornecedor) 
         %td= analise.user.email
-        %td= link_to 'Ver Comentarios', analise_comentarios_path(analise)
-        %td= link_to 'Escrever comentario', new_analise_comentario_path(analise) 
-
-        %td= link_to 'Mostrar', analise
-        %td= link_to 'Editar', edit_analise_path(analise)
-        %td= link_to 'Apagar', analise, method: :delete, data: { confirm: 'Tem certeza?' }  
-  %br/
+        %td
+          = link_to  analise_comentarios_path(analise), class: "btn btn-default" do
+            %span.glyphicon.glyphicon-eye-open
+            Ver Comentarios
+        %td
+          = link_to new_analise_comentario_path(analise) , class: "btn btn-default" do
+            %span.glyphicon.glyphicon-comment
+            Comentar
+        
+        - if current_user.try(:admin)
+          %td= link_to 'Mostrar', analise
+          %td= link_to 'Editar', edit_analise_path(analise)
+          %td= link_to 'Apagar', analise, method: :delete, data: { confirm: 'Tem certeza?' }  
   / = link_to 'Nova Analise', new_analise_path
+  %br
+  - if @fornecedor
+    = link_to  new_fornecedor_analise_path(@fornecedor), class: "btn btn-default" do
+      %span.glyphicon.glyphicon-pencil
+      Escrever Analise

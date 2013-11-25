@@ -1,17 +1,26 @@
 .jumbotron
   .container
-    %h2 Bem vindo ao Buscajolo!
+    %h2 
+      Bem vindo ao Buscajolo!
+      = image_tag "/assets/two-storied_house.png"
     %p A procura de materiais de constru&#231;&#227;o? Busque abaixo o que procura e encontre todas as lojas fornecedoras, com an&#225;lises de clientes reais! Por favor, deixe-nos a sua an&#225;lise tamb&#233;m e ajude futuros clientes!
+.container
+  .panel.panel-primary
+    .panel-heading
+      Buscar fornecedor!
+    .panel-body
+      = form_tag results_path, :method => 'get' do
+        .form-group
+          = label_tag :fornecedor_nome, "Nome do Fornecedor"
+          = text_field_tag :fornecedor_nome, params[:fornecedor_nome], class: "form-control", :placeholder => "Nome do Fornecedor"
+        .form-group
+          = label_tag :produtos
+          = select_tag 'produtos', options_from_collection_for_select(@produtos, 'id', 'nome'),{:multiple => true, :id => "fornecedor_produtos", "data-placeholder" => "Selecione os produtos..."}
+        .actions
+          = button_tag type: 'submit', :name => nil, class: "btn btn-primary"  do
+            %span.glyphicon.glyphicon-search
+            Buscar
 
-    = form_tag results_path, :method => 'get' do
-      .form-group
-        = label_tag :fornecedor_nome, "Nome do Fornecedor"
-        = text_field_tag :fornecedor_nome, params[:fornecedor_nome], class: "form-control", :placeholder => "Nome do Fornecedor"
-      .form-group
-        = label_tag :produtos
-        = select_tag 'produtos', options_from_collection_for_select(@produtos, 'id', 'nome'),{:multiple => true, :id => "fornecedor_produtos", "data-placeholder" => "Selecione os produtos..."}
-      .actions
-        = submit_tag "Buscar!", :name => nil, class: "btn btn-primary" 
 
 - if user_signed_in? && current_user.admin
   .container
@@ -22,6 +31,8 @@
           = link_to "Fornecedores", fornecedors_path, class: "btn btn-default"
           = link_to "Produtos", produtos_path, class: "btn btn-default"
           = link_to "Analises", analises_path, class: "btn btn-default"
+          = link_to "Comentarios", comentarios_path, class: "btn btn-default"
+
 
 
 / Begin page content

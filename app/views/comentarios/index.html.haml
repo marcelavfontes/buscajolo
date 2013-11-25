@@ -1,22 +1,48 @@
 .container
+  - if @analise
+    .panel.panel-primary
+      .panel-heading
+        Analise
+      .panel-body
+
+        %p
+          %b Titulo:
+          = @analise.titulo
+        %p
+          %b Texto:
+          .well
+            = @analise.texto
+        %p
+          %b Fornecedor:
+          = link_to @analise.fornecedor.nome, fornecedor_analises_path(@analise.fornecedor)
+        %p
+          %b Usuario:
+          = @analise.user.email
   %h1 Lista de comentarios
-  %table
+  %table.table
     %tr
       %th Titulo
       %th Texto
-      %th User
-      %th Analise
-      %th
-      %th
-      %th
+      %th Usuario
+      - if current_user.try(:admin)
+        %th 
+        %th
+        %th
+        %th
     - @comentarios.each do |comentario|
       %tr
         %td= comentario.titulo
-        %td= comentario.texto
-        %td= comentario.user_id
-        %td= comentario.analise.try(:id)
-        %td= link_to 'Show', comentario
-        %td= link_to 'Edit', edit_comentario_path(comentario)
-        %td= link_to 'Destroy', comentario, method: :delete, data: { confirm: 'Are you sure?' }  
-  %br/
+        %td.well
+          = comentario.texto
+        %td= comentario.user.email
+        - if current_user.try(:admin)
+          %td= link_to "Analise", analise_path(comentario.analise) 
+          %td= link_to 'Mostrar', comentario
+          %td= link_to 'Editar', edit_comentario_path(comentario)
+          %td= link_to 'Apagar', comentario, method: :delete, data: { confirm: 'Are you sure?' }  
   / = link_to 'Novo Comentario', new_comentario_path
+  %br
+  - if @analise
+    = link_to new_analise_comentario_path(@analise) , class: "btn btn-default" do
+      %span.glyphicon.glyphicon-comment
+      Comentar

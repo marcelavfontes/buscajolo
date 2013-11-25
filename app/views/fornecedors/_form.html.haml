@@ -20,4 +20,4 @@
     = select_tag 'produtos', options_from_collection_for_select(@produtos, 'id', 'nome', tem_produto),{:multiple => true, :id => "fornecedor_produtos", "data-placeholder" => "Selecione os produtos..."}
  
   .actions
-    = f.submit class: "btn btn-primary" 
+    = f.submit  params[:action] == "new" ? "Criar Fornecedor" : "Atualizar Fornecedor", class: "btn btn-primary" 

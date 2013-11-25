@@ -4,6 +4,7 @@ class AnalisesController < ApplicationController
   def index
     if params[:fornecedor_id]
       @analises = Analise.find_all_by_fornecedor_id(params[:fornecedor_id])
+      @fornecedor = Fornecedor.find_by_id(params[:fornecedor_id])
     else
       @analises = Analise.all
     end 
@@ -54,7 +55,7 @@ class AnalisesController < ApplicationController
 
     respond_to do |format|
       if @analise.save
-        format.html { redirect_to @analise, notice: 'Analise was successfully created.' }
+        format.html { redirect_to fornecedor_analises_path(@fornecedor), notice: 'A analise foi criada com sucesso.' }
         format.json { render json: @analise, status: :created, location: @analise }
       else
         format.html { render action: "new" }
@@ -70,7 +71,7 @@ class AnalisesController < ApplicationController
 
     respond_to do |format|
       if @analise.update_attributes(params[:analise])
-        format.html { redirect_to @analise, notice: 'Analise was successfully updated.' }
+        format.html { redirect_to @analise, notice: 'A analise foi editada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

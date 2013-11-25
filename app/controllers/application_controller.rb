@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
 	def authorize
 	  if !current_permission.allow?(params[:controller], params[:action])
-	    redirect_to root_url, alert: "Opa!"
+	    redirect_to root_url, alert: "Sem autorizacao!"
 	  end
 	end
 

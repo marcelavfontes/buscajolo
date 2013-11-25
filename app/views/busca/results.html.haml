@@ -13,7 +13,14 @@
           %td= fornecedor.nome
           %td= fornecedor.cidade
           %td= raw produtos_html(fornecedor, @produtos_sel)
-          %td= link_to 'Ver Analises', fornecedor_analises_path(fornecedor)
-          %td= link_to 'Escrever Analise', new_fornecedor_analise_path(fornecedor)
+          %td
+            = link_to fornecedor_analises_path(fornecedor), class: "btn btn-default" do
+              %span.glyphicon.glyphicon-eye-open
+              Ver Analises
+          %td
+            = link_to  new_fornecedor_analise_path(fornecedor), class: "btn btn-default" do
+              %span.glyphicon.glyphicon-pencil
+              Escrever Analise
+
   - else
     Nenhum fornecedor foi achado com esses dados!
